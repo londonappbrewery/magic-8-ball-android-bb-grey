@@ -1,13 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/activity_main"
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:orientation="vertical"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    tools:context=".MainActivity">
-</RelativeLayout>
+    android:background="@color/lightblue"
+    tools:context="com.londonappbrewery.magiceightball.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+
+        <TextView android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textFontWeight="900"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center">
+
+        <ImageView android:id="@+id/image_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ball1"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/image_ball_description" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <Button android:id="@+id/button_ask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_text"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:background="@color/blue"/>
+    </RelativeLayout>
+</LinearLayout>
